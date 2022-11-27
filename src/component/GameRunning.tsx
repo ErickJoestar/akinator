@@ -14,7 +14,7 @@ export const GameRunning: React.FC<Props> = ({ action, onAnswer }) => {
   const handleNo = () => onAnswer(Answer.No);
 
   // == UI ========================================================================
-  const title = action.type === ActionType.Question ? 'Tu personaje...' : 'Adivina que tu personaje es...';
+  const title = action.type === ActionType.Question ? 'Tu animal...' : 'Adivino que tu animal es...';
   const content = action.type === ActionType.Question ? action.node.question 
                   : action.type === ActionType.Guess ? action.node.name
                   : null/*not valid*/;
