@@ -15,16 +15,8 @@ export const RootNode: QuestionNode = {
         name: 'Tigre',
       },
       no: {
-        type: NodeType.Question,
-        question: 'Es un perro?',
-        yes: {
-          type: NodeType.Subject,
-          name: 'Dog',
-        },
-        no: {
-          type: NodeType.Subject,
-          name: 'Cat',
-        },
+        type: NodeType.Subject,
+        name: 'Perro',
       },
     },
     no: {
@@ -32,7 +24,7 @@ export const RootNode: QuestionNode = {
       question: 'Tiene alas?',
       yes: {
         type: NodeType.Subject,
-        name: 'Bird',
+        name: 'Pajaro',
       },
       no: {
         type: NodeType.Subject,
