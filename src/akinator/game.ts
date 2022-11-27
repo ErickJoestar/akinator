@@ -34,20 +34,16 @@ export class Game {
 
   /** ends the game (if it's running) */
   public end(): void {
-    if(this.state !== GameState.Running) throw new Error('Game is not running');
-
     this.state = GameState.Over;
+    this.action = undefined;
   }
 
   public getState() { return this.state; } 
 
   // == Game Logic ================================================================
   /** returns the current action */
-  // NOTE: If there is no action available, it means the game is over (and will throw
-  //       an error).
-  public getAction(): Action {
-    if(this.action === undefined) throw new Error('No action available');
-
+  // NOTE: If there is no action available, it means the game is over
+  public getAction(): Action | undefined/*no action*/ {
     return this.action;
   }
 
