@@ -26,9 +26,30 @@ export const GameGuessedWrong: React.FC<Props> = ({ onAddSubject }) => {
   // == UI ========================================================================
   return (
     <Flex flexDirection='column' alignItems='center'>
-      <Heading color='#666' marginBottom='24px'>En que estabas pensando? Escribe su nombre y una pregunta para adivinarlo</Heading>
-      <Input colorScheme='teal' size='lg' value={name} onChange={handleNameChange} placeholder='Nombre' marginBottom='16px' />
-      <Input colorScheme='teal' size='lg' value={question} onChange={handleQuestionChange} placeholder='Pregunta' marginBottom='16px' />
+      <Heading
+        color='#666'
+        marginBottom='24px'
+        textAlign='center'
+      >
+        En que estabas pensando?<br/>
+        Escribe su nombre y una pregunta para adivinarlo
+      </Heading>
+      <Input
+        value={name}
+        placeholder='Nombre'
+        size='lg'
+        marginBottom='16px'
+        colorScheme='teal'
+        onChange={handleNameChange}
+      />
+      <Input
+        value={question}
+        placeholder='Pregunta'
+        size='lg'
+        marginBottom='16px'
+        colorScheme='teal'
+        onChange={handleQuestionChange}
+      />
       <Button
         size='lg'
         colorScheme='teal'
